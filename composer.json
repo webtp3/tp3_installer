@@ -25,7 +25,11 @@
 		},
 		{
 			"type": "vcs",
-			"url": "https://bitbucket.org/web-tp3/web-tp3.git"
+			"url": "https://thomasruta@bitbucket.org/web-tp3/cag_tests.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://bitbucket.org/web-tp3/web_installer.git"
 		}
 	],
 	"require": {
@@ -48,15 +52,8 @@
 		"friendsoftypo3/tt-address": "dev-master",
 		"bk2k/bootstrap-package":"*",
 		"apen/additional_reports":"*",
-		"fab/media":"*",
-		"georgringer/news":"*",
-		"dmitryd/typo3-realurl":"*",
-		"fluidtypo3/vhs":"*",
 		"yoast-seo-for-typo3/yoast_seo":"*",
-		"web-tp3/web-tp3":"*"
-
-
-
+		"web-tp3/cag_tests":"*"
 	},
 	"require-dev": {
 		"devlog/devlog": "dev-master",
@@ -73,7 +70,6 @@
 		"fiunchinho/phpunit-randomizer": "~3.0.0",
 		"phpunit/phpunit": "*",
 		"nimut/testing-framework": "^3.0@dev"
-
 
 	},
 	"autoload": {
