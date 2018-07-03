@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40b1ed4d-4433-4116-b8c9-ee1e5a4fc649" name="Default" comment="">
+    <list default="true" id="40b1ed4d-4433-4116-b8c9-ee1e5a4fc649" name="Default" comment="get composer via php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitbucket-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bitbucket-pipelines.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,20 +29,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bitbucket-pipelines.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bitbucket-pipelines.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
+            <state relative-caret-position="374">
+              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -63,8 +63,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/bitbucket-pipelines.yml" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -153,7 +153,7 @@
       <workItem from="1530517312442" duration="1418000" />
       <workItem from="1530520225434" duration="114000" />
       <workItem from="1530542295363" duration="678000" />
-      <workItem from="1530546144116" duration="13226000" />
+      <workItem from="1530546144116" duration="15026000" />
     </task>
     <task id="LOCAL-00001" summary="Init tp3 Installer">
       <created>1530516002787</created>
@@ -267,11 +267,32 @@
       <option name="project" value="LOCAL" />
       <updated>1530628701485</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Unable to locate package php7.0-pcntl">
+      <created>1530629544961</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1530629544961</updated>
+    </task>
+    <task id="LOCAL-00018" summary="get composer via php">
+      <created>1530630899291</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1530630899291</updated>
+    </task>
+    <task id="LOCAL-00019" summary="step back">
+      <created>1530631655461</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1530631655461</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16645000" />
+    <option name="totallyTimeSpent" value="18445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3848" y="-8" width="1936" height="1056" extended-state="6" />
@@ -330,7 +351,10 @@
     <MESSAGE value="add-apt-repository ppa:ondrej/php" />
     <MESSAGE value="no sudo" />
     <MESSAGE value="image atlassian/default-image:2" />
-    <option name="LAST_COMMIT_MESSAGE" value="image atlassian/default-image:2" />
+    <MESSAGE value="Unable to locate package php7.0-pcntl" />
+    <MESSAGE value="get composer via php" />
+    <MESSAGE value="step back" />
+    <option name="LAST_COMMIT_MESSAGE" value="step back" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -394,17 +418,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="374">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
+        <state relative-caret-position="170">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
         </state>
       </provider>
     </entry>
