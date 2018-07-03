@@ -3,28 +3,33 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: node:7.5.0
+image: 7.1-apache
 
 pipelines:
   default:
     - step:
-        name: Build and push to S3
+        image: 7.1-apache
+        caches:
+          - composer
         script:
-          - apt-get update
-          - apt-get install -y python-dev
-          - curl -O https://bootstrap.pypa.io/get-pip.py
-          - python get-pip.py
-          - pip install awscli
-          - aws deploy push --application-name $APPLICATION_NAME --s3-location s3://$S3_BUCKET/test_app_$BITBUCKET_BUILD_NUMBER --ignore-hidden-files
+          - apt-get update && apt-get install -y unzip
+          - cd ../../web
+          - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+          - composer install
+          - composer require web-tp3/tp3_installer
+          - composer update --dev
     - step:
         name: Deploy to test
-        image: aneitayang/aws-cli:1.0
+        image: 7.1-apache
         deployment: test
         script:
-          - python deploy.py test
+          - mkdir -p ~/.ssh
+          - cat my_known_hosts >> ~/.ssh/known_hosts
+          - (umask  077 ; echo $myKey | base64 --decode > ~/.ssh/id_rsa)
+          - ssh $user@$srv 'echo "connected to `host` as $USER"
     - step:
         name: Deploy to staging
-        image: aneitayang/aws-cli:1.0
+        image: php:7.1.1
         deployment: staging
         trigger: manual
         script:
