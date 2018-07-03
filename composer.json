@@ -22,6 +22,10 @@
 		{
 			"type": "composer",
 			"url": "https://composer.typo3.org/"
+		},
+		{
+			"type": "vcs",
+			"url": "https://thomasruta@bitbucket.org/web-tp3/cag_tests.git"
 		}
 	],
 	"require": {
@@ -29,12 +33,20 @@
 		"helhum/typo3-console": "^5",
 		"helhum/dotenv-connector": "^2",
 		"helhum/config-loader": "^0.8",
+		"ext-gd": "*",
+		"ext-fileinfo": "*",
+		"ext-zlib": "*",
+		"ext-openssl": "*",
+		"ext-zip": "*",
+		"ext-mysqli": "*",
 		"typo3/cms-cli": "*",
 		"typo3/class-alias-loader": "*",
 		"typo3/cms-composer-installers": "*",
 		"psr/http-message": "~1.0",
 		"cogpowered/finediff": "~0.3.1",
-		"guzzlehttp/guzzle": "^6.3.0"
+		"guzzlehttp/guzzle": "^6.3.0",
+		"web-tp3/tp3_installer":"*",
+		"web-tp3/cag_tests":"*"
 	},
 	"require-dev": {
 		"deployer/deployer": "^6",
