@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40b1ed4d-4433-4116-b8c9-ee1e5a4fc649" name="Default" comment="Init tp3 Installer">
+    <list default="true" id="40b1ed4d-4433-4116-b8c9-ee1e5a4fc649" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bitbucket-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bitbucket-pipelines.yml" afterDir="false" />
     </list>
@@ -41,8 +41,8 @@
       <file leaf-file-name="bitbucket-pipelines.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="255">
+              <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
             </state>
           </provider>
         </entry>
@@ -153,7 +153,7 @@
       <workItem from="1530517312442" duration="1418000" />
       <workItem from="1530520225434" duration="114000" />
       <workItem from="1530542295363" duration="678000" />
-      <workItem from="1530546144116" duration="11865000" />
+      <workItem from="1530546144116" duration="13226000" />
     </task>
     <task id="LOCAL-00001" summary="Init tp3 Installer">
       <created>1530516002787</created>
@@ -253,11 +253,25 @@
       <option name="project" value="LOCAL" />
       <updated>1530626671147</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="no sudo">
+      <created>1530628161324</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1530628161324</updated>
+    </task>
+    <task id="LOCAL-00016" summary="image atlassian/default-image:2">
+      <created>1530628701485</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1530628701485</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15284000" />
+    <option name="totallyTimeSpent" value="16645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3848" y="-8" width="1936" height="1056" extended-state="6" />
@@ -314,7 +328,9 @@
     <MESSAGE value="add php ext." />
     <MESSAGE value="debian package names not ubuntu :-(" />
     <MESSAGE value="add-apt-repository ppa:ondrej/php" />
-    <option name="LAST_COMMIT_MESSAGE" value="add-apt-repository ppa:ondrej/php" />
+    <MESSAGE value="no sudo" />
+    <MESSAGE value="image atlassian/default-image:2" />
+    <option name="LAST_COMMIT_MESSAGE" value="image atlassian/default-image:2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -387,8 +403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="255">
+          <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
         </state>
       </provider>
     </entry>
