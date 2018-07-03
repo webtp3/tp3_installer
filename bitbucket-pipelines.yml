@@ -27,6 +27,11 @@ pipelines:
           - cat my_known_hosts >> ~/.ssh/known_hosts
           - (umask  077 ; echo $myKey | base64 --decode > ~/.ssh/id_rsa)
           - ssh $user@$srv 'echo "connected to `host` as $USER"
+          - cd ../../web
+          - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+          - composer install
+          - composer require web-tp3/tp3_installer
+          - composer update --dev
     - step:
         name: Deploy to staging
         image: php:7.1.1
