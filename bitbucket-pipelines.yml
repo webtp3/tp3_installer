@@ -8,7 +8,7 @@ image: 7.1-apache
 pipelines:
   default:
     - step:
-        image: 7.1-apache
+        image: php:7.1.1
         caches:
           - composer
         script:
@@ -20,7 +20,7 @@ pipelines:
           - composer update --dev
     - step:
         name: Deploy to test
-        image: 7.1-apache
+        image: php:7.1.1
         deployment: test
         script:
           - mkdir -p ~/.ssh
