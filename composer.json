@@ -48,15 +48,9 @@
 		"typo3/cms-composer-installers": "*",
 		"psr/http-message": "~1.0",
 		"cogpowered/finediff": "~0.3.1",
-		"guzzlehttp/guzzle": "^6.3.0",
-		"friendsoftypo3/tt-address": "dev-master",
-		"bk2k/bootstrap-package":"*",
-		"apen/additional_reports":"*",
-		"yoast-seo-for-typo3/yoast_seo":"*",
-		"web-tp3/cag_tests":"*"
+		"guzzlehttp/guzzle": "^6.3.0"
 	},
 	"require-dev": {
-		"devlog/devlog": "dev-master",
 		"deployer/deployer": "^6",
 		"consolidation/robo": "^1",
 		"codeception/codeception":"*",
