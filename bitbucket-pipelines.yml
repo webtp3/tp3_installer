@@ -13,7 +13,6 @@ pipelines:
           - composer
         script:
           - apt-get update && apt-get install -y unzip
-          - cd ../../web
           - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
           - composer install
           - composer require web-tp3/tp3_installer
