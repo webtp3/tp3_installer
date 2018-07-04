@@ -104,3 +104,9 @@ You can pick a Version of typo3 within the Versions of the Installer. Dependienc
  ```
  
  Feel free to edit the piplines for automated deployment
+ For the first test we suite this package with a docker image running with all needed php features to get started with testing.
+ 
+ Combined you can make automated tests before deployment.
+ 
+ https://bitbucket.org/web-tp3/docker
+ 
