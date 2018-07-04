@@ -59,7 +59,8 @@ You can pick a Version of typo3 within the Versions of the Installer. Dependienc
 		"psr/http-message": "~1.0",
 		"cogpowered/finediff": "~0.3.1",
 		"guzzlehttp/guzzle": "^6.3.0",
-		"web-tp3/tp3_installer":"1.0.0"
+		"web-tp3/tp3_installer":"dev-1.0-dev",
+		"web-tp3/cag_tests":"*"
 	},
 	"require-dev": {
 		"deployer/deployer": "^6",
