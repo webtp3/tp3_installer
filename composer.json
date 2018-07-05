@@ -80,9 +80,6 @@
 		},
 		"helhum/dotenv-connector": {
 			"cache-dir": "var/cache"
-		},
-		"branch-alias": {
-			"dev-TYPO3_9-4": "dev-master"
 		}
 	},
 	"non-feature-branches": [
