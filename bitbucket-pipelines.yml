@@ -14,7 +14,7 @@ pipelines:
         script:
           - apt-get update && apt-get upgrade -y
           - cd /var/www/
-          - composer --dev --stability=dev create-project web-tp3/tp3_installer html
+          - composer --dev --stability=dev create-project web-tp3/tp3_installer:dev-8.x-dev html
           - cd html
           # start testing
           - php vendor/phpunit/phpunit/phpunit --configuration web/typo3conf/ext/cag_tests/Tests/Build/UnitTests.xml --teamcity
