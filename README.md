@@ -10,10 +10,10 @@ This is an installer for typo3 dev environment with unit, functional and accepta
  composer --dev --stability=dev create-project web-tp3/tp3_installer:dev-master
  ```
 
-You can pick a Version of typo3 within the Versions of the Installer. Dependiencies will be maintained within the different Versions. So think about disconnecting your git. 
+You can pick a Version/Branch of typo3 within the the Installer 8.x-dev or 9.x-dev. Dependiencies will be maintained within the different Versions. So think about disconnecting your git. 
  
  
- Simply installs typo3 out of following composer.json for typo3 LTS 8.x
+ Simply installs typo3 out of following composer.json for typo3 LTS 9.x -> dev-master
  
  ```json
 {
@@ -44,7 +44,7 @@ You can pick a Version of typo3 within the Versions of the Installer. Dependienc
 		}
 	],
 	"require": {
-		"typo3/cms": "dev-TYPO3_8-7",
+		"typo3/cms": "dev-master",
 		"helhum/typo3-console": "^5",
 		"helhum/dotenv-connector": "^2",
 		"helhum/config-loader": "^0.8",
