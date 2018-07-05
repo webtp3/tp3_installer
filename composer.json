@@ -24,6 +24,10 @@
 		{
 			"type": "composer",
 			"url": "https://composer.typo3.org/"
+		},
+		{
+			"type": "vcs",
+			"url": "https://bitbucket.org/web-tp3/cag_tests.git"
 		}
 	],
 	"require": {
@@ -43,7 +47,8 @@
 		"psr/http-message": "~1.0",
 		"cogpowered/finediff": "~0.3.1",
 		"guzzlehttp/guzzle": "^6.3.0",
-		"web-tp3/tp3_installer":"*"
+		"web-tp3/tp3_installer":"dev-master",
+		"web-tp3/cag_tests":"*"
 	},
 	"require-dev": {
 		"deployer/deployer": "^6",
@@ -75,9 +80,6 @@
 		},
 		"helhum/dotenv-connector": {
 			"cache-dir": "var/cache"
-		},
-		"branch-alias": {
-			"dev-TYPO3_9-4": "dev-master"
 		}
 	},
 	"non-feature-branches": [
