@@ -18,7 +18,7 @@ Dependiencies will be maintained within the different Versions. So think about d
 
 Simply installs typo3 out of following composer.json for typo3 LTS 9.x -> dev-master 
   
- ```json
+```json
 {
 	"name": "web-tp3/tp3_installer",
 	"description": "testing typo3",
@@ -105,6 +105,6 @@ Simply installs typo3 out of following composer.json for typo3 LTS 9.x -> dev-ma
 	]
 
 }
- ```
+```
  
  Feel free to edit the piplines for automated deployment
