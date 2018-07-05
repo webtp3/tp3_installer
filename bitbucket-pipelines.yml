@@ -17,7 +17,18 @@ pipelines:
           - php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
           - php composer-setup.php
           - php -r "unlink('composer-setup.php');"
-          - php composer.phar  --dev --stability=dev create-project web-tp3/tp3_installer
+          - composer --dev --stability=dev create-project web-tp3/tp3_installer html
+          - cd html
+          # start testing
+          - php vendor/phpunit/phpunit/phpunit --configuration web/typo3conf/ext/cag_tests/Tests/Build/UnitTests.xml --teamcity
+          - php vendor/phpunit/phpunit/phpunit --configuration web/typo3conf/ext/cag_tests/Tests/Build/UnitTestsDeprecated.xml --teamcity
+          - php vendor/phpunit/phpunit/phpunit --configuration web/typo3conf/ext/cag_tests/Tests/Build/FunctionalTests.xml --teamcity
+          - mkdir -p web/typo3temp/var/tests
+          - ./bin/chromedriver --url-base=/wd/hub >/dev/null 2>&1 &
+          - php -S 0.0.0.0:8000 >/dev/null 2>&1 &
+          - sleep 3;
+          - typo3DatabaseName='typo3' typo3DatabaseHost='localhost' typo3DatabaseUsername='root' typo3DatabasePassword='pw' vendor/codeception/codeception/codecept run Acceptance -c web/typo3conf/ext/cag_tests/Tests/Build/AcceptanceTests.yml
+
 
     - step:
         name: Deploy to staging
