@@ -7,7 +7,7 @@ Install typo3
 
 This is an installer for typo3 dev environment with unit, functional and acceptance  testing and developer tools
 ```bash
- composer --dev --stability=dev create-project web-tp3/tp3_installer:dev-master
+ composer --dev --stability=dev create-project web-tp3/tp3_installer:dev-8.x-dev 
 ```
 
 You can pick a Version/Branch of typo3 within the the Installer 
