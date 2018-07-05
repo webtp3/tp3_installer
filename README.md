@@ -12,7 +12,7 @@ This is an installer for typo3 dev environment with unit, functional and accepta
 
 You can pick a Version/Branch of typo3 within the the Installer dev-master (9.x-dev) dev-8.x-dev (8.x-dev) Dependiencies will be maintained within the different Versions. So think about disconnecting your git. 
  
-Simply installs typo3 out of following composer.json for typo3 LTS 8.x
+Simply installs typo3 out of following composer.json for typo3 LTS 9.x
  
 
 ```json
