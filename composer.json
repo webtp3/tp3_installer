@@ -26,7 +26,7 @@
 		},
 		{
 			"type": "vcs",
-			"url": "https://bitbucket.org/web-tp3/cag_tests.git"
+			"url": "https://thomasruta@bitbucket.org/web-tp3/cag_tests.git"
 		}
 	],
 	"require": {
