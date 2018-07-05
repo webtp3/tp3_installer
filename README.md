@@ -8,15 +8,14 @@ Install typo3
 This is an installer for typo3 dev environment with unit, functional and acceptance  testing and developer tools
 ```bash
  composer --dev --stability=dev create-project web-tp3/tp3_installer:dev-master
- ```
+```
 
-You can pick a Version of typo3 within the Versions of the Installer. Dependiencies will be maintained within the different Versions. So think about disconnecting your git. 
+You can pick a Version/Branch of typo3 within the the Installer dev-master (9.x-dev) dev-8.x-dev (8.x-dev) Dependiencies will be maintained within the different Versions. So think about disconnecting your git. 
  
- 
- Simply installs typo3 out of following composer.json for typo3 LTS 8.x
+ Simply installs typo3 out of following composer.json for typo3 LTS 9.x
  
 
- ```json
+```json
 {
 	"name": "web-tp3/tp3_installer",
 	"description": "testing typo3",
@@ -45,7 +44,7 @@ You can pick a Version of typo3 within the Versions of the Installer. Dependienc
 		}
 	],
 	"require": {
-		"typo3/cms": "dev-TYPO3_8-7",
+		"typo3/cms": "dev-master",
 		"helhum/typo3-console": "^5",
 		"helhum/dotenv-connector": "^2",
 		"helhum/config-loader": "^0.8",
@@ -78,7 +77,6 @@ You can pick a Version of typo3 within the Versions of the Installer. Dependienc
 		"fiunchinho/phpunit-randomizer": "~3.0.0",
 		"phpunit/phpunit": "*",
 		"nimut/testing-framework": "^3.0@dev"
-
 	},
 	"autoload": {
 		"psr-4": {
@@ -94,17 +92,15 @@ You can pick a Version of typo3 within the Versions of the Installer. Dependienc
 		},
 		"helhum/dotenv-connector": {
 			"cache-dir": "var/cache"
-		},
-		"branch-alias": {
-			"dev-TYPO3_8-7": "8.x-dev"
 		}
+		
 	},
 	"non-feature-branches": [
 	"TYPO3_.+"
 	]
 
 }
- ```
+```
  
  Feel free to edit the piplines for automated deployment
  For the first test we suite this package with a docker image running with all needed php features to get started with testing.
