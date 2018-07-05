@@ -8,14 +8,14 @@ image: webtp3/docker:alpha
 pipelines:
   default:
     - step:
-        image: webtp3/docker:alpha
+        image: webtp3/docker:8.x-dev
         caches:
           - composer
         script:
           - apt-get update && apt-get upgrade -y
-          - composer install
-          - composer require web-tp3/tp3_installer
-          - composer update --dev
+          - cd /var/www/
+          - composer --dev --stability=dev create-project web-tp3/tp3_installer test
+
 
     - step:
         name: Deploy to staging
