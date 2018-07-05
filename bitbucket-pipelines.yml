@@ -14,7 +14,17 @@ pipelines:
         script:
           - apt-get update && apt-get upgrade -y
           - cd /var/www/
-          - composer --dev --stability=dev create-project web-tp3/tp3_installer test
+          - composer --dev --stability=dev create-project web-tp3/tp3_installer html
+          - cd html
+          # start testing
+          - php vendor/phpunit/phpunit/phpunit --configuration web/typo3conf/ext/cag_tests/Tests/Build/UnitTests.xml --teamcity
+          - php vendor/phpunit/phpunit/phpunit --configuration web/typo3conf/ext/cag_tests/Tests/Build/UnitTestsDeprecated.xml --teamcity
+          - php vendor/phpunit/phpunit/phpunit --configuration web/typo3conf/ext/cag_tests/Tests/Build/FunctionalTests.xml --teamcity
+          - mkdir -p web/typo3temp/var/tests
+          - ./bin/chromedriver --url-base=/wd/hub >/dev/null 2>&1 &
+          - php -S 0.0.0.0:8000 >/dev/null 2>&1 &
+          - sleep 3;
+          - typo3DatabaseName='typo3' typo3DatabaseHost='localhost' typo3DatabaseUsername='root' typo3DatabasePassword='pw' vendor/codeception/codeception/codecept run Acceptance -c web/typo3conf/ext/cag_tests/Tests/Build/AcceptanceTests.yml
 
 
     - step:
