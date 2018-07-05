@@ -14,6 +14,7 @@ You can pick a Version of typo3 within the Versions of the Installer. Dependienc
  
  
  Simply installs typo3 out of following composer.json for typo3 LTS 8.x
+ 
  ```json
 {
 	"name": "web-tp3/tp3_installer",
