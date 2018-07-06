@@ -15,11 +15,8 @@
 		{
 			"type": "composer",
 			"url": "https://composer.typo3.org/"
-		},
-		{
-			"type": "vcs",
-			"url": "https://bitbucket.org/web-tp3/cag_tests.git"
 		}
+
 	],
 	"require": {
 		"typo3/cms": "dev-TYPO3_8-7",
