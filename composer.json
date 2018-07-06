@@ -39,7 +39,6 @@
 		"cogpowered/finediff": "~0.3.1",
 		"guzzlehttp/guzzle": "^6.3.0",
 		"web-tp3/tp3_installer":"dev-8.x-dev"
-		//"web-tp3/cag_tests":"*"
 	},
 	"require-dev": {
 		"deployer/deployer": "^6",
