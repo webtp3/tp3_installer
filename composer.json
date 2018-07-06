@@ -4,7 +4,7 @@
 	"type": "project",
 	"stability":"stable",
 	"minimum-stability": "dev",
-	"version": "1.0.0",
+	"version": "dev-master",
 	"license": "GPL-3.0+",
 	"authors": [
 		{
