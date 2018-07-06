@@ -8,7 +8,7 @@ image: webtp3/docker:alpha
 pipelines:
   default:
     - step:
-        image: webtp3/docker:8.x-dev
+        image: webtp3/docker:16.4-stable
         caches:
           - composer
         script:

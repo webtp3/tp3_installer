@@ -7,16 +7,8 @@
 	"license": "GPL-3.0+",
 	"authors": [
 		{
-			"name": "Jochen Rieger",
-			"email": "j.rieger@connecta.ag"
-		},
-		{
 			"name": "Thomas Ruta",
 			"email": "email@thomasruta.de"
-		},
-		{
-			"name": "Matthias Krams",
-			"email": "m.krams@connecta.ag"
 		}
 	],
 	"repositories": [
@@ -26,7 +18,7 @@
 		},
 		{
 			"type": "vcs",
-			"url": "https://thomasruta@bitbucket.org/web-tp3/cag_tests.git"
+			"url": "https://bitbucket.org/web-tp3/cag_tests.git"
 		}
 	],
 	"require": {
@@ -46,8 +38,8 @@
 		"psr/http-message": "~1.0",
 		"cogpowered/finediff": "~0.3.1",
 		"guzzlehttp/guzzle": "^6.3.0",
-		"web-tp3/tp3_installer":"dev-8.x-dev",
-		"web-tp3/cag_tests":"*"
+		"web-tp3/tp3_installer":"dev-8.x-dev"
+		//"web-tp3/cag_tests":"*"
 	},
 	"require-dev": {
 		"deployer/deployer": "^6",
