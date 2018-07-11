@@ -21,8 +21,6 @@
 	"require": {
 		"typo3/cms": "dev-TYPO3_8-7",
 		"helhum/typo3-console": "^5",
-		"helhum/dotenv-connector": "^2",
-		"helhum/config-loader": "*",
 		"ext-gd": "*",
 		"ext-fileinfo": "*",
 		"ext-zlib": "*",
