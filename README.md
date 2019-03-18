@@ -24,18 +24,12 @@ Simply installs typo3 out of following composer.json for typo3 LTS 9.x
 	"version": "1.0.0",
 	"license": "GPL-3.0+",
 	"authors": [
-		{
-			"name": "Jochen Rieger",
-			"email": "j.rieger@connecta.ag"
-		},
+		
 		{
 			"name": "Thomas Ruta",
 			"email": "email@thomasruta.de"
-		},
-		{
-			"name": "Matthias Krams",
-			"email": "m.krams@connecta.ag"
 		}
+		
 	],
 	"repositories": [
 		{

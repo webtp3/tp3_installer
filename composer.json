@@ -1,89 +1,113 @@
 {
 	"name": "web-tp3/tp3_installer",
 	"description": "testing typo3",
-	"type": "project",
-	"stability":"stable",
+	"homepage": "https://web.tp3.de",
 	"minimum-stability": "dev",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"license": "GPL-3.0+",
 	"authors": [
-		{
-			"name": "Jochen Rieger",
-			"email": "j.rieger@connecta.ag"
-		},
+
 		{
 			"name": "Thomas Ruta",
 			"email": "email@thomasruta.de"
-		},
-		{
-			"name": "Matthias Krams",
-			"email": "m.krams@connecta.ag"
 		}
+
 	],
-	"repositories": [
-		{
+	"repositories":  {
+		"0":{
+			"type": "path",
+			"url": "Packages/*",
+			"options": {
+				"symlink": true
+			}
+		},
+		"1": {
 			"type": "composer",
 			"url": "https://composer.typo3.org/"
-		},
-		{
-			"type": "vcs",
-			"url": "https://bitbucket.org/web-tp3/cag_tests.git"
 		}
-	],
+
+	},
 	"require": {
-		"typo3/cms": "dev-master",
+		"typo3/minimal": "^8.7 || ^9.5",
 		"helhum/typo3-console": "^5",
 		"helhum/dotenv-connector": "^2",
 		"helhum/config-loader": "*",
-		"ext-gd": "*",
-		"ext-fileinfo": "*",
-		"ext-zlib": "*",
-		"ext-openssl": "*",
-		"ext-zip": "*",
-		"ext-mysqli": "*",
-		"typo3/cms-cli": "*",
+		"helhum/typo3-config-handling": "*",
 		"typo3/class-alias-loader": "*",
-		"typo3/cms-composer-installers": "*",
-		"psr/http-message": "~1.0",
-		"cogpowered/finediff": "~0.3.1",
-		"guzzlehttp/guzzle": "^6.3.0",
-		"web-tp3/tp3_installer":"dev-master",
-		"web-tp3/cag_tests":"*"
+		"typo3/cms-composer-installers": "*"
 	},
 	"require-dev": {
+		"helhum/dotenv-connector": "^2.0",
+		"typo3-console/create-reference-command": "@dev",
+		"typo3-console/php-server-command": "*",
+		"typo3-console/composer-typo3-auto-install": "^0.2",
 		"deployer/deployer": "^6",
+		"deployer/recipes": "^6",
 		"consolidation/robo": "^1",
 		"codeception/codeception":"*",
 		"typo3/testing-framework": "*",
-		"friendsofphp/php-cs-fixer": "^2.13@dev",
-		"se/selenium-server-standalone":"~2.53",
+		"friendsofphp/php-cs-fixer": "*",
+		"se/selenium-server-standalone":"*",
 		"typo3/cms-styleguide" :"*",
-		"ext-soap": "*",
 		"phpunit/php-invoker":"^1.1",
-		"enm1989/chromedriver": "~2.30",
-		"fiunchinho/phpunit-randomizer": "~3.0.0",
+		"web-tp3/chromedriver":"^2",
 		"phpunit/phpunit": "*",
-		"nimut/testing-framework": "^3.8@dev"
+		"nimut/testing-framework": "^3.8@dev",
+		"web-tp3/cag_tests":"^1.2"
+	},
 
-	},
-	"autoload": {
-		"psr-4": {
-		}
-	},
 	"extra": {
 		"typo3/cms": {
-			"cms-package-dir": "{$vendor-dir}/typo3/cms",
-			"web-dir": "web"
+			"app-dir": "web",
+			"web-dir": "web",
+			"bin-dir": "bin",
+			"cms-package-dir": "Build/vendor/typo3/cms",
+			"Package": {
+				"partOfMinimalUsableSystem": true
+			}
+		},
+		"typo3/class-alias-loader": {
+			"always-add-alias-loader": true,
+			"autoload-case-sensitivity": false,
+			"class-alias-maps": [
+				"Migrations/Code/ClassAliasMap.php"
+			]
+		},
+		"branch-alias": {
+			"dev-TYPO3_8-7": "8.x-dev",
+			"dev-TYPO3_9-5": "9.5.x-dev"
 		},
 		"helhum/typo3-console": {
 			"install-extension-dummy": false
 		},
+		"helhum/typo3-config-handling": {
+			"main-config": "config/settings.yaml",
+			"prod-config": "config/prod.settings.yaml",
+			"dev-config": "config/dev.settings.yaml",
+			"ext-config": "config/includes/extension.yaml"
+		},
 		"helhum/dotenv-connector": {
-			"cache-dir": "var/cache"
+			"cache-dir": "var/cache",
+			"allow-overrides": true,
+			"env-file": ".env.dist"
+		},
+		"CAG/composer": {
+			"web-root": "web/"
 		}
 	},
-	"non-feature-branches": [
-	"TYPO3_.+"
-	]
+	"scripts": {
+		"test:php:unit": [
+			"@php -v",
+			"@php .Build/bin/phpunit Tests/Unit"
+		]
 
+	},
+
+	"config": {
+		"optimize-autoloader": true,
+		"bin-dir": "bin",
+		"vendor-dir":"Build/vendor/",
+		"sort-packages": false,
+		"web-root": "../../web/"
+	}
 }
